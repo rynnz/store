@@ -149,7 +149,7 @@ module.exports = function (app, db) {
 			msg: "Please auth"
 		});
 
-		var info = await db.promiseSelect("SELECT SUM(count_cards) cards, SUM(count_passwords) passwords, COUNT(*) clients FROM data_owners WHERE owner_id = ?", [req.session.uid]);
+		var info = await db.promiseSelect("SELECT SUM(count_passwords) passwords, COUNT(*) clients FROM data_owners WHERE owner_id = ?", [req.session.uid]);
 		var countrys = await db.promiseSelect("SELECT country, COUNT(*) count FROM data_owners WHERE owner_id = ? GROUP BY country ORDER BY count DESC LIMIT 5", [req.session.uid]);
 		var checkeds = await db.promiseSelect("SELECT COUNT(*) count FROM data_owners WHERE owner_id = ? AND checked = 1", [req.session.uid]);
 		var uncheckeds = await db.promiseSelect("SELECT COUNT(*) count FROM data_owners WHERE owner_id = ? AND checked = 0", [req.session.uid]);

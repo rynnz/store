@@ -10,7 +10,6 @@ $.ajax({
 	success: function (data) {
 		if (data.status) {
 			$("#info-clients").text(data.info.clients)
-			$("#info-cards").text(data.info.cards)
 			$("#info-passwords").text(data.info.passwords)
 
 			for (var i in data.countrys) {
